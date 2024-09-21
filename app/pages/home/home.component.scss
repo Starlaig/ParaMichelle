@@ -1,0 +1,103 @@
+.back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    animation-name: backdiv;
+    animation-duration: 3500ms;
+    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: relative;
+    margin: 20px auto;
+    background-color: rgb(255, 0, 0);
+    height: 150px;
+    width: 150px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 3500ms;
+    animation-iteration-count: infinite;
+}
+
+.heart:after, .heart:before {
+    background-color: rgb(255, 0, 0);
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.heart:after {
+    left: 80px;
+}
+
+.heart:before {
+    top: -80px;
+}
+
+@keyframes backdiv {
+    50% {
+        background: yellow;
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(0.6) rotate(-45deg);
+    }
+}
+
+.bday {
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 90%; /* Asegúrate de que no se salga de la pantalla */
+    font-size: 2.5rem; /* Tamaño ajustado para móviles */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #0e2804;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #aded23;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.boton {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(143, 216, 64);
+    border: none;
+    padding: 15px 30px; /* Tamaño de botón más grande */
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 25px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Espaciado mejorado */
+}
+
+button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+a {
+    color: white; /* Cambié a blanco para mejor contraste */
+    text-decoration: none;
+}
